@@ -6,7 +6,25 @@ import UserPosts from "../../containers/UserPosts";
 import Loading from "../../components/Loading";
 
 const ProfileRoute = () => {
-  return <div data-testid="profile-route"></div>;
+  const [name, setName] = useState("");
+  const [avatar, setAvatar] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [userPosts, setUserPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div data-testid="profile-route">
+      <UserProfile
+        name={name}
+        avatar={avatar}
+        username={username}
+        email={email}
+      />
+
+      {isLoading ? <Loading /> : <UserPosts posts={userPosts} />}
+    </div>
+  );
 };
 
 export default ProfileRoute;
