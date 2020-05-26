@@ -1,8 +1,6 @@
 # Instagram React SPA
 
-<img src="https://img.shields.io/badge/-React-blue" />
-<img src="https://img.shields.io/badge/-JavaScript-yellow" />
-<img src="https://img.shields.io/badge/-Hooks-pink" />
+![React](https://img.shields.io/badge/-React-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Hooks](https://img.shields.io/badge/-Hooks-violet)
 
 ### Para Iniciar:
 
