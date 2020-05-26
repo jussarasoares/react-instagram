@@ -1,7 +1,7 @@
 import React from "react";
 
+import Avatar from "../../components/Avatar";
 import "./UserProfile.scss";
-import profilePlaceholder from "../../assets/img/profile-placeholder.png";
 
 const UserProfile = ({ avatar, name, username }) => {
   return (
@@ -9,13 +9,7 @@ const UserProfile = ({ avatar, name, username }) => {
       <div className="container">
         <div className="profile-data">
           <div className="user">
-            <div className="user__thumb">
-              {avatar.length > 0 ? (
-                <img src={avatar} alt="" />
-              ) : (
-                <img src={profilePlaceholder} alt="" />
-              )}
-            </div>
+            <Avatar className="user__thumb" avatar={avatar} />
 
             {name && (
               <p className="user__name">

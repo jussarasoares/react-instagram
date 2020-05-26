@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import SuccessMessage from "../../components/SuccessMessage";
+import Avatar from "../../components/Avatar";
 
 import "./UserForm.scss";
-import profilePlaceholder from "../../assets/img/profile-placeholder.png";
 
 const UserForm = () => {
   const [name, setName] = useState("Ada Lovelace");
@@ -44,13 +44,7 @@ const UserForm = () => {
         <div className="container">
           <div className="profile-data">
             <div className="user">
-              <div className="user__thumb">
-                {avatar ? (
-                  <img src={avatar} alt="" />
-                ) : (
-                  <img src={profilePlaceholder} alt="" />
-                )}
-              </div>
+              <Avatar className="user__thumb" avatar={avatar} />
 
               {name && (
                 <p className="user__name">

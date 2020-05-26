@@ -1,9 +1,8 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
-import "./SuccessMessage.scss";
 import { ReactComponent as SuccessAnimation } from "../../assets/img/success-animation.svg";
+import "./SuccessMessage.scss";
 
 const SuccessMessage = () => (
   <div className="success-message" data-testid="success-message">
