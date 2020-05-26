@@ -2,21 +2,21 @@
 
 ![React](https://img.shields.io/badge/-React-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Hooks](https://img.shields.io/badge/-Hooks-violet)
 
-### Para Iniciar:
+## Para Iniciar:
 
 - `yarn install` ou `npm install`.
 - Inicie com o comando `yarn start` ou `npm start` / `npm run start`.
 
 ## Tópicos:
 
-- **Fetch API**
-- **JS Funcional:**
-- **Modularização**
-- **Presentational e Container Components**
-- **Rails-Style Structure + Module Index**
-- **React Hooks** _useState_, _useEffect_
-- **React Testing Library**
-- **React**
+- Fetch API
+- JS Funcional:
+- Modularização
+- Presentational e Container Components
+- Rails-Style Structure + Module Index
+- React Hooks _useState_, _useEffect_
+- React Testing Library
+- React
 
 ## Requisitos:
 
