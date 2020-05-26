@@ -12,30 +12,6 @@ const UserForm = () => {
   const [email, setEmail] = useState("adalovelace@gmail.com");
   const [submit, setSubmit] = useState(false);
 
-  const handleSetName = (event) => {
-    const { value } = event.target;
-
-    setName(value);
-  };
-
-  const handleSetAvatar = (event) => {
-    const { value } = event.target;
-
-    setAvatar(value);
-  };
-
-  const handleSetUserName = (event) => {
-    const { value } = event.target;
-
-    setUsername(value);
-  };
-
-  const handleSetEmail = (event) => {
-    const { value } = event.target;
-
-    setEmail(value);
-  };
-
   const handleAddUser = (event) => null;
 
   return (
@@ -65,7 +41,7 @@ const UserForm = () => {
               type="text"
               value={name}
               placeholder="Ex: Maria Beasley"
-              onChange={(event) => handleSetName(event)}
+              onChange={(event) => setName(event.target.value)}
             />
 
             <label>Usuário</label>
@@ -73,7 +49,7 @@ const UserForm = () => {
               type="text"
               value={username}
               placeholder="Ex: maria_beasley"
-              onChange={(event) => handleSetUserName(event)}
+              onChange={(event) => setUsername(event.target.value)}
             />
 
             <label>Email</label>
@@ -81,16 +57,14 @@ const UserForm = () => {
               type="email"
               value={email}
               placeholder="Ex: mariabeasley@gmail.com"
-              onChange={(event) => handleSetEmail(event)}
+              onChange={(event) => setEmail(event.target.value)}
             />
 
-            <label>
-              Url da Imagem de Perfil (use a url da imagem do Linkedin)
-            </label>
+            <label>Url da Imagem de Perfil</label>
             <input
               type="text"
               placeholder="http://..."
-              onChange={(event) => handleSetAvatar(event)}
+              onChange={(event) => setAvatar(event.target.value)}
             />
 
             <button type="button" onClick={(event) => handleAddUser(event)}>
