@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import SuccessMessage from "../../components/SuccessMessage";
 import Avatar from "../../components/Avatar";
+import { createUser } from "../../resources/users";
 
 import "./UserForm.scss";
 
@@ -12,7 +13,20 @@ const UserForm = () => {
   const [email, setEmail] = useState("adalovelace@gmail.com");
   const [submit, setSubmit] = useState(false);
 
-  const handleAddUser = (event) => null;
+  const handleAddUser = (event) => {
+    event.preventDefault();
+
+    const userData = {
+      name,
+      avatar,
+      username,
+      email,
+    };
+
+    createUser(userData).then(() => {
+      setSubmit(true);
+    });
+  };
 
   return (
     <React.Fragment>

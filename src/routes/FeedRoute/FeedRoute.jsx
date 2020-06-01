@@ -4,6 +4,9 @@ import Stories from "../../containers/Stories";
 import Loading from "../../components/Loading";
 
 import Posts from "../../containers/Posts";
+import { findUsers } from "../../resources/users";
+import { findPosts } from "../../resources/posts";
+import { findStories } from "../../resources/stories";
 
 import "./FeedRoute.scss";
 
@@ -15,6 +18,28 @@ const FeedRoute = () => {
 
   const getUserPostById = (postUserId) =>
     users.find((user) => postUserId === user.id);
+
+  useEffect(() => {
+    findUsers().then((data) => {
+      setUsers(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (usersFetched === users.length) {
+      return;
+    }
+    findPosts(users[usersFetched].id).then((data) => {
+      setPosts(data);
+      setUsersFetched(usersFetched + 1);
+    });
+  }, [users, usersFetched]);
+
+  useEffect(() => {
+    findStories().then((data) => {
+      setStories(data);
+    });
+  }, []);
 
   return (
     <div data-testid="feed-route">
