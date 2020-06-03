@@ -30,9 +30,10 @@ const FeedRoute = () => {
       return;
     }
     findPosts(users[usersFetched].id).then((data) => {
-      setPosts(data);
+      setPosts([...posts, ...data]);
       setUsersFetched(usersFetched + 1);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [users, usersFetched]);
 
   useEffect(() => {
