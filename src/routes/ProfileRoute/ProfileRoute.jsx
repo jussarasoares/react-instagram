@@ -10,7 +10,7 @@ import { findPosts } from "../../resources/posts";
 
 const ProfileRoute = () => {
   const { username } = useParams();
-  const [id, setUserId] = useState("");
+  const [id, setUserId] = useState();
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
   const [userName, setUserName] = useState("");
@@ -29,6 +29,7 @@ const ProfileRoute = () => {
   }, [username]);
 
   useEffect(() => {
+    if (!id) return;
     findPosts(id).then((data) => {
       setUserPosts(data);
       setIsLoading(false);

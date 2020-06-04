@@ -9,7 +9,7 @@ const UserProfile = ({ avatar, name, username }) => {
       <div className="container">
         <div className="profile-data">
           <div className="user">
-            <Avatar className="user__thumb" avatar={avatar} />
+            <Avatar avatar={avatar} />
 
             {name && (
               <p className="user__name">
